@@ -43,6 +43,17 @@ public class PlayerMovement : MonoBehaviour
     }
     #endregion
 
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            if (currentOneWaySurface != null)
+            {
+                StartCoroutine(DisableCollision());
+            }
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("OneWayPlatform"))
@@ -62,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     {
         BoxCollider2D platformCollider = currentOneWaySurface.GetComponent<BoxCollider2D>();
         Physics2D.IgnoreCollision(playerCollider, platformCollider);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.4f);
         Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
     }
 }

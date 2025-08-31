@@ -392,6 +392,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e39eabb976c98e948b944e93b25321bf, type: 3}
+--- !u!212 &1617452084 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1790171719141571426, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+  m_PrefabInstance: {fileID: 3340507467102694164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1717923058 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8151046957178608239, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+  m_PrefabInstance: {fileID: 3340507467102694164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1813894105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -710,6 +720,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1423334461115485266, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 1451b3bc997e49a4fb081d579ecc5f39, type: 2}
     - target: {fileID: 1616070971085468284, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: m_Name
       value: Player
@@ -717,6 +731,30 @@ PrefabInstance:
     - target: {fileID: 1790171719141571426, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388832476923386113, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      propertyPath: m_Name
+      value: FeetPosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      propertyPath: sr
+      value: 
+      objectReference: {fileID: 1617452084}
+    - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      propertyPath: feetPos
+      value: 
+      objectReference: {fileID: 1717923058}
+    - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      propertyPath: checkRadius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      propertyPath: jumpStartTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

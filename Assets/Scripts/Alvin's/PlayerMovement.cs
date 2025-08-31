@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Player body")]
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private SpriteRenderer sr;
     [SerializeField] private BoxCollider2D playerCollider;
 
     [Header("Cat power")]
@@ -13,67 +14,52 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce;
 
     [Header("Grounding")]
-    [SerializeField] LayerMask GroundLayer;
-    [SerializeField] Transform GroundCheck;
-
+    private bool isGrounded;
+    public Transform feetPos;
+    public float checkRadius;
+    public LayerMask whatIsGround;
     // other
-    private GameObject currentOneWaySurface;
-    private float horizontal;
+    
 
-    #region Player Movement
-    private void FixedUpdate()
-    {
-        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
-    }
-    public void Move(InputAction.CallbackContext context)
-    {
-        horizontal = context.ReadValue<Vector2>().x;
-    }
+    [SerializeField] private float jumpStartTime;
+    private float jumpTime;
+    private bool isJumping;
+    private float moveInput;
 
-    public void Jump(InputAction.CallbackContext context)
-    {
-        if (context.performed && IsGrounded())
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-        }
-    }
-    private bool IsGrounded()
-    {
-        return Physics2D.OverlapCapsule(GroundCheck.position, new Vector2(1f, 0.1f), CapsuleDirection2D.Horizontal, 0, GroundLayer);
-    }
-    #endregion
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S)|| Input.GetKeyDown(KeyCode.DownArrow))
+        moveInput = Input.GetAxisRaw("Horizontal");
+        FaceMoveDirection();
+
+        
+    }
+
+    void FixedUpdate()
+    {
+        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);    
+    }
+
+    void Jump()
+    {
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        if (isGrounded == true && Input.GetButton("Jump"))
         {
-            if (currentOneWaySurface != null)
-            {
-                StartCoroutine(DisableCollision());
-            }
+            rb.linearVelocity = Vector2.up * jumpForce;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    void FaceMoveDirection()
     {
-        if (collision.gameObject.CompareTag("OneWayPlatform"))
+        if (moveInput > 0)
         {
-            currentOneWaySurface = collision.gameObject;
+            sr.flipX = true;
         }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("OneWayPlatform"))
+        else if (moveInput < 0)
         {
-            currentOneWaySurface = null;
+            sr.flipX = false;
         }
     }
 
-    private IEnumerator DisableCollision()
-    {
-        BoxCollider2D platformCollider = currentOneWaySurface.GetComponent<BoxCollider2D>();
-        Physics2D.IgnoreCollision(playerCollider, platformCollider);
-        yield return new WaitForSeconds(0.4f);
-        Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
-    }
 }

@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
     // other
-    
 
+    [Header("Other")]
     [SerializeField] private float jumpStartTime;
     private float jumpTime;
     private bool isJumping;
@@ -32,8 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
         FaceMoveDirection();
-
-        
+        Jump();
     }
 
     void FixedUpdate()
@@ -45,9 +44,30 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if (isGrounded == true && Input.GetButton("Jump"))
+        if (isGrounded == true && Input.GetButtonDown("Jump"))
         {
+            isJumping = true;
+            jumpTime = jumpStartTime;
             rb.linearVelocity = Vector2.up * jumpForce;
+        }
+
+        if (Input.GetButton("Jump") && isJumping == true)
+        {
+            if(jumpTime > 0)
+            {
+                rb.linearVelocity = Vector2.up * jumpForce;
+                jumpTime -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
+            }
+        }
+        
+
+        if (Input.GetButtonUp("Jump"))
+        {
+            isJumping = false;
         }
     }
     void FaceMoveDirection()

@@ -387,6 +387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 7819557595573513924, guid: e39eabb976c98e948b944e93b25321bf, type: 3}
+      propertyPath: m_SurfaceArc
+      value: 170
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -746,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 1717923058}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: jumpForce
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: checkRadius

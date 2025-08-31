@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class HoldInteractable : MonoBehaviour
 {
-    //public MainLOGIC tracker;
+    public LogicScript logicScript;
     public float holdDuration = 3f;  
     private float holdProgress = 0f;  
 
@@ -14,17 +14,13 @@ public class HoldInteractable : MonoBehaviour
     private bool isComplete=false;
     public ChangeSprite changeSprite;
     public bool TwoWayInteract = true;
-   
+    public string name;
 
 
     void Start()
     {
         changeSprite = GetComponent<ChangeSprite>();
-        //tracker = FindFirstObjectByType<MainLOGIC>();
-       // if (tracker == null)
-        // {
-        //     Debug.LogError("MainLOGIC script not found in the scene!");
-        // }
+        logicScript = FindFirstObjectByType<LogicScript>();
 
         // if (progressBar != null)
         // {
@@ -32,13 +28,17 @@ public class HoldInteractable : MonoBehaviour
         //     progressBar.maxValue = holdDuration; 
         //     progressBar.value = holdProgress; 
         // }
+
+
+        if (string.IsNullOrEmpty(name))
+        {
+            name = gameObject.name;
+         } ;
     }
 
     void Update()
     {
-        if (isPlayerInRange && !isComplete 
-        //&& tracker.islightsOn 
-        ) 
+        if (isPlayerInRange && !isComplete ) 
         {
             if (Input.GetKey(KeyCode.E)) 
             {
@@ -99,7 +99,7 @@ public class HoldInteractable : MonoBehaviour
         holdProgress = 0f;
         //tracker.CompleteObjective();
         changeSprite.toggleSprite();
-
+        logicScript.RegisterInteraction(name);
         Debug.Log("Interaction Complete!");
 
     }

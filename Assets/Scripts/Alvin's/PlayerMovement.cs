@@ -1,29 +1,68 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Player body")]
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private BoxCollider2D playerCollider;
 
-    [SerializeField] private Rigidbody2D body;
-    public float Speed = 1;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Cat power")]
+    [SerializeField] float speed;
+    [SerializeField] float jumpForce;
+
+    [Header("Grounding")]
+    [SerializeField] LayerMask GroundLayer;
+    [SerializeField] Transform GroundCheck;
+
+    // other
+    private GameObject currentOneWaySurface;
+    private float horizontal;
+
+    #region Player Movement
+    private void FixedUpdate()
     {
-        
+        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+    }
+    public void Move(InputAction.CallbackContext context)
+    {
+        horizontal = context.ReadValue<Vector2>().x;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Jump(InputAction.CallbackContext context)
     {
-        float xInput = Input.GetAxis("Horizontal");
-        float yInput = Input.GetAxis("Vertical");
+        if (context.performed && IsGrounded())
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+    }
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCapsule(GroundCheck.position, new Vector2(1f, 0.1f), CapsuleDirection2D.Horizontal, 0, GroundLayer);
+    }
+    #endregion
 
-        if (Mathf.Abs(xInput) > 0)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
-            body.linearVelocity = new Vector2(xInput * Speed, body.linearVelocity.y);
+            currentOneWaySurface = collision.gameObject;
         }
-        if (Mathf.Abs(yInput) > 0)
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("OneWayPlatform"))
         {
-            body.linearVelocity = new Vector2(body.linearVelocity.x, yInput * Speed);
+            currentOneWaySurface = null;
         }
+    }
+
+    private IEnumerator DisableCollision()
+    {
+        BoxCollider2D platformCollider = currentOneWaySurface.GetComponent<BoxCollider2D>();
+        Physics2D.IgnoreCollision(playerCollider, platformCollider);
+        yield return new WaitForSeconds(0.25f);
+        Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
     }
 }

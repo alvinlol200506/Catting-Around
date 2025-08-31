@@ -14,11 +14,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce;
 
     [Header("Grounding")]
+    [SerializeField] private Transform feetPos;
+    [SerializeField] private float checkRadius;
     private bool isGrounded;
-    public Transform feetPos;
-    public float checkRadius;
     public LayerMask whatIsGround;
-    // other
 
     [Header("Other")]
     [SerializeField] private float jumpStartTime;

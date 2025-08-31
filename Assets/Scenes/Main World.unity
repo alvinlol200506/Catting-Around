@@ -746,7 +746,7 @@ PrefabInstance:
       objectReference: {fileID: 1717923058}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: jumpForce
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: checkRadius
@@ -754,7 +754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: jumpStartTime
-      value: 0.25
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: whatIsGround.m_Bits

@@ -416,6 +416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Migu
       objectReference: {fileID: 0}
+    - target: {fileID: 5347087680880035314, guid: 82b642bb39442bb4c864d16cccbe7b45, type: 3}
+      propertyPath: holdDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6985035892711712774, guid: 82b642bb39442bb4c864d16cccbe7b45, type: 3}
       propertyPath: m_Enabled
       value: 1

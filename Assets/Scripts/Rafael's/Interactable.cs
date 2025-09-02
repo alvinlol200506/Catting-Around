@@ -8,7 +8,7 @@ public class HoldInteractable : MonoBehaviour
     public float holdDuration = 3f;  
     private float holdProgress = 0f;  
 
-    //public Slider progressBar; 
+    public Slider progressBar; 
     private bool isPlayerInRange = false; 
     public Text InteractPrompt;
     private bool isComplete=false;
@@ -22,12 +22,12 @@ public class HoldInteractable : MonoBehaviour
         changeSprite = GetComponent<ChangeSprite>();
         logicScript = FindFirstObjectByType<LogicScript>();
 
-        // if (progressBar != null)
-        // {
-        //     progressBar.gameObject.SetActive(false); 
-        //     progressBar.maxValue = holdDuration; 
-        //     progressBar.value = holdProgress; 
-        // }
+        if (progressBar != null)
+        {
+            progressBar.gameObject.SetActive(false); 
+            progressBar.maxValue = holdDuration; 
+            progressBar.value = holdProgress; 
+        }
 
 
         if (string.IsNullOrEmpty(name))
@@ -43,8 +43,8 @@ public class HoldInteractable : MonoBehaviour
             if (Input.GetKey(KeyCode.E)) 
             {
                 holdProgress += Time.deltaTime; 
-                // if (progressBar != null)
-                //     progressBar.value = holdProgress; 
+                if (progressBar != null)
+                    progressBar.value = holdProgress; 
 
                 if (holdProgress >= holdDuration)
                 {
@@ -70,34 +70,32 @@ public class HoldInteractable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //if (other.CompareTag("Player") && !isComplete)
+        if (other.CompareTag("Player") && !isComplete)
         {
             isPlayerInRange = true;
-            // if (progressBar != null)
-            //     progressBar.gameObject.SetActive(true); 
+            if (progressBar != null)
+                progressBar.gameObject.SetActive(true); 
            
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-       // if (other.CompareTag("Player"))
+       if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            // if (progressBar != null)
-            //     progressBar.gameObject.SetActive(false); 
+            if (progressBar != null)
+                progressBar.gameObject.SetActive(false); 
         }
     }
 
     void Interact()
     {
-        //changeMaterial.cleaned();
-        // if (progressBar != null)
-        //     progressBar.gameObject.SetActive(false);
+        if (progressBar != null)
+            progressBar.value=0;
 
 
         holdProgress = 0f;
-        //tracker.CompleteObjective();
         changeSprite.toggleSprite();
         logicScript.RegisterInteraction(name);
         Debug.Log("Interaction Complete!");

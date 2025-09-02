@@ -1,20 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LogicScript : MonoBehaviour
 {
 
-    public int health=10;
+     int health;
+    public int maxHealth=10;
     public int CatnipMeter = 0;
     public bool wet;
-    
+    public Image healthbar;
+    RectTransform fillrect;
 
 
 
+    public void HealthEdit(int x)
+    {
+        health += x;
+        if (health <= 0)
+        {
+            //death
+        }
 
+        updatebar();
+        
+    }
+    void Start()
+    {
+        fillrect = healthbar.rectTransform;
+        health = maxHealth;
+        updatebar();
+    }
 
-
+    void updatebar() { 
+        float ratio = (float)health / maxHealth;
+        var size = fillrect.sizeDelta;
+        size.x = ratio * 158.42f;
+        fillrect.sizeDelta = size;
+    }
 
 
 

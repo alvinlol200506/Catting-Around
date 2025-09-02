@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class InteractionTrigger 
+public abstract class InteractionTrigger : MonoBehaviour
 {
-    void InteractTrigger() {}
+    public abstract void InteractTrigger();
 }

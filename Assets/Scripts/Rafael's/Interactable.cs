@@ -15,10 +15,12 @@ public class HoldInteractable : MonoBehaviour
     public ChangeSprite changeSprite;
     public bool TwoWayInteract = true;
     public string name;
+    public InteractionTrigger trigger;
 
 
     void Start()
     {
+        trigger = GetComponent<InteractionTrigger>();
         changeSprite = GetComponent<ChangeSprite>();
         logicScript = FindFirstObjectByType<LogicScript>();
 
@@ -98,6 +100,7 @@ public class HoldInteractable : MonoBehaviour
         holdProgress = 0f;
         changeSprite.toggleSprite();
         logicScript.RegisterInteraction(name);
+        trigger.InteractTrigger();
         Debug.Log("Interaction Complete!");
 
     }

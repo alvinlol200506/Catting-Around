@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class HoldInteractable : MonoBehaviour
 
     public Slider progressBar; 
     private bool isPlayerInRange = false; 
-    public Text InteractPrompt;
+    public TextMeshProUGUI InteractPrompt;
     private bool isComplete=false;
     public ChangeSprite changeSprite;
     public bool TwoWayInteract = true;
@@ -70,18 +71,21 @@ public class HoldInteractable : MonoBehaviour
         {
             isPlayerInRange = true;
             if (progressBar != null)
-                progressBar.gameObject.SetActive(true); 
-           
+                progressBar.gameObject.SetActive(true);
+            if (InteractPrompt != null)
+                InteractPrompt.gameObject.SetActive(true);
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-       if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
             if (progressBar != null)
                 progressBar.gameObject.SetActive(false); 
+            if (progressBar != null)
+                InteractPrompt.gameObject.SetActive(false); 
         }
     }
 
@@ -92,10 +96,18 @@ public class HoldInteractable : MonoBehaviour
 
 
         holdProgress = 0f;
-        changeSprite.toggleSprite();
+        if (changeSprite != null)
+        {
+            changeSprite.toggleSprite();
+        }
+
         logicScript.RegisterInteraction(name);
-        trigger.InteractTrigger();
-        Debug.Log("Interaction Complete!");
+
+        if (trigger != null)
+        {
+            trigger.InteractTrigger();
+        }
+
 
     }
 }

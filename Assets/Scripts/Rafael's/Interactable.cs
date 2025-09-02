@@ -84,7 +84,7 @@ public class HoldInteractable : MonoBehaviour
             isPlayerInRange = false;
             if (progressBar != null)
                 progressBar.gameObject.SetActive(false); 
-            if (progressBar != null)
+            if (InteractPrompt != null)
                 InteractPrompt.gameObject.SetActive(false); 
         }
     }

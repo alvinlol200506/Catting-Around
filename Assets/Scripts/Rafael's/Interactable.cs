@@ -60,12 +60,6 @@ public class HoldInteractable : MonoBehaviour
             }
         }
 
-        // if (progressBar != null)
-        // {
-        //     Camera mainCam = Camera.main;
-        //     if (mainCam != null)
-        //         progressBar.transform.LookAt(mainCam.transform);
-        // }
 
         
     }

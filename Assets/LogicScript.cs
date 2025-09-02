@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LogicScript : MonoBehaviour
 {
 
-     int health;
+    public int health;
     public int maxHealth=10;
     public int CatnipMeter = 0;
     public bool wet;
@@ -20,7 +20,7 @@ public class LogicScript : MonoBehaviour
         health += x;
         if (health <= 0)
         {
-            //death
+            Debug.Log("death");
         }
 
         updatebar();

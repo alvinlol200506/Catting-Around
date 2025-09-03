@@ -1228,7 +1228,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2.54
+  orthographic size: 3.55
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2859,7 +2859,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -4015,7 +4015,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 2.54
+    OrthographicSize: 3.55
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

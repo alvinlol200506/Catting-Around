@@ -384,7 +384,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27.96, y: 4.2097}
+  m_AnchoredPosition: {x: -34.7, y: 4.2097}
   m_SizeDelta: {x: 353.0186, y: 96.2263}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &571719624
@@ -430,7 +430,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571719625}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 818870126}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571719625
 MonoBehaviour:
   m_ObjectHideFlags: 0

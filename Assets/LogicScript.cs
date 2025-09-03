@@ -36,7 +36,7 @@ public class LogicScript : MonoBehaviour
     void updatebar() { 
         float ratio = (float)health / maxHealth;
         var size = fillrect.sizeDelta;
-        size.x = ratio * 158.42f;
+        size.x = ratio * 110f;
         fillrect.sizeDelta = size;
     }
 

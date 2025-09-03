@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private BoxCollider2D playerCollider;
+    [SerializeField] private Animator animator;
 
     [Header("Cat power")]
     [SerializeField] float speed;
@@ -33,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
         FaceMoveDirection();
         Jump();
+
+        animator.SetBool("Moving", Mathf.Abs(moveInput) > 0.01f);
+
+        bool isReallyGrounded = isGrounded && Mathf.Approximately(rb.linearVelocity.y, 0f);
+        animator.SetBool("Grounded", isReallyGrounded);
 
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -82,11 +88,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (moveInput > 0)
         {
-            sr.flipX = false; // Menghadap kanan
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z); // Menghadap kanan
         }
         else if (moveInput < 0)
         {
-            sr.flipX = true; // Menghadap kiri
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z); // Menghadap kiri
         }
     }
 

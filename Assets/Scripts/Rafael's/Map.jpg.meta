@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cbe5bdc14771dfe4e96ebb4002fee586
+guid: c574b9dd1ad2815489450ef64f33b686
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5066328456584849426
-    second: Jalan_0002_0
+      213: -7809289510937641710
+    second: Gambar WhatsApp 2025-08-31 pukul 16.49.58_e346dc5e_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jalan_0002_0
+      name: Gambar WhatsApp 2025-08-31 pukul 16.49.58_e346dc5e_0
       rect:
         serializedVersion: 2
-        x: 57
-        y: 108
-        width: 406
-        height: 271
+        x: 0
+        y: 0
+        width: 964
+        height: 475
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee79ecd7c19c0b9b0800000000000000
-      internalID: -5066328456584849426
+      spriteID: 21db060b094df9390800000000000000
+      internalID: -7809289510937641710
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Jalan_0002_0: -5066328456584849426
+      Gambar WhatsApp 2025-08-31 pukul 16.49.58_e346dc5e_0: -7809289510937641710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -82,11 +82,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (moveInput > 0)
         {
-            sr.flipX = true;
+            sr.flipX = false; // Menghadap kanan
         }
         else if (moveInput < 0)
         {
-            sr.flipX = false;
+            sr.flipX = true; // Menghadap kiri
         }
     }
 

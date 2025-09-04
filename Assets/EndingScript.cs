@@ -18,9 +18,12 @@ public class EndingScript : MonoBehaviour
     [SerializeField] bool DEVMODE;
     UnityEngine.UI.Image imagenya;
     String death;
+
     [SerializeField] GameObject Toilet;
     [SerializeField] GameObject Stove;
     [SerializeField] GameObject Catnip;
+    [SerializeField] GameObject Mating;
+
     [SerializeField] EndingImagesSO so;
 
     void Start()
@@ -39,8 +42,8 @@ public class EndingScript : MonoBehaviour
         if (death == "High")
         {
             Catnip.SetActive(true);
-            
-            }
+
+        }
         else if (death == "Toilet")
         {
             Toilet.SetActive(true);
@@ -49,6 +52,11 @@ public class EndingScript : MonoBehaviour
         {
             Stove.SetActive(true);
         }
+        else if (death == "Mating")
+        {
+            Mating.SetActive(true);
+        }
+        
         
         
 

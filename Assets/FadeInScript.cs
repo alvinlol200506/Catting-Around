@@ -7,17 +7,17 @@ public class FadeInScript : MonoBehaviour
 
     [SerializeField] AudioClip audioClip;
     [SerializeField]AudioSource AS;
-    private void Start()
-    {
+
+    public void Start()
+    { 
         StartCoroutine(FadeIn());
-    
     }
 
     private System.Collections.IEnumerator FadeIn()
     {
         float time = 0f;
         canvasGroup.alpha = 0;
-     if (audioClip != null)
+        if (audioClip != null)
         {
             AS.PlayOneShot(audioClip);
         }

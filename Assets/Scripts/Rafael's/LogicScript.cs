@@ -13,7 +13,7 @@ public class LogicScript : MonoBehaviour
     public bool wet;
     public Image healthbar;
     RectTransform fillrect;
-
+    [SerializeField] EndingImagesSO es;
 
 
     public void HealthEdit(int x, string sumber)
@@ -22,7 +22,7 @@ public class LogicScript : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("death");
-            DeathData.causeOfDeath = sumber;
+            es.ending = sumber;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 

@@ -14,6 +14,7 @@ public class HighScript : InteractionTrigger
     private DepthOfField depthOfField;
     [SerializeField] int CatnipLick = 0;
     LogicScript ls;
+    [SerializeField] EndingImagesSO end;
 
     void Start()
     {
@@ -51,7 +52,7 @@ public class HighScript : InteractionTrigger
         }
         if (CatnipLick >= 10)
         {
-            DeathData.causeOfDeath = "High";
+            end.ending = "High";
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

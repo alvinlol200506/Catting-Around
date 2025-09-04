@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class HighScript : InteractionTrigger
 {
@@ -47,6 +48,11 @@ public class HighScript : InteractionTrigger
         {
             depthOfField.active = true;
             depthOfField.mode.value = DepthOfFieldMode.Gaussian;
+        }
+        if (CatnipLick >= 10)
+        {
+            DeathData.causeOfDeath = "High";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 

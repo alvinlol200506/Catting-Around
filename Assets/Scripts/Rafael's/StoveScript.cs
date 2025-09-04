@@ -18,7 +18,7 @@ public class StoveScript : InteractionTrigger
     {
         if (on)
         {
-            ls.HealthEdit(-2);
+            ls.HealthEdit(-2, name);
         }   
     }
 }

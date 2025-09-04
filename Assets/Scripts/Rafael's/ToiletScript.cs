@@ -10,6 +10,6 @@ public class ToiletScript : InteractionTrigger
     }
     public override void InteractTrigger()
     {
-        ls.HealthEdit(-2);
+        ls.HealthEdit(-2, name);
      }
 }

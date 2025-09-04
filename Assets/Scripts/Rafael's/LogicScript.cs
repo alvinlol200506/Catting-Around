@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LogicScript : MonoBehaviour
@@ -15,15 +16,18 @@ public class LogicScript : MonoBehaviour
 
 
 
-    public void HealthEdit(int x)
+    public void HealthEdit(int x, string sumber)
     {
         health += x;
         if (health <= 0)
         {
             Debug.Log("death");
+            DeathData.causeOfDeath = sumber;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         updatebar();
+
         
     }
     void Start()

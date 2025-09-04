@@ -26,10 +26,13 @@ public class EndingScript : MonoBehaviour
 
     [SerializeField] EndingImagesSO so;
 
-    void Start()
+    private IEnumerator Start()
     {
+        // Tunggu 0.5 detik di awal
+        yield return new WaitForSeconds(0.5f);
 
-        death = so.ending;
+        // Logic lain setelah semua komponen kemungkinan sudah load
+        death = so.ending.Trim();
         Debug.Log(death);
         if (DEVMODE)
         {
@@ -56,7 +59,6 @@ public class EndingScript : MonoBehaviour
         {
             Mating.SetActive(true);
         }
-        
         
         
 

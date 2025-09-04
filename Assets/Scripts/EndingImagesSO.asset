@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08234e76aacd65d48a6e1ecfc0508555, type: 3}
   m_Name: EndingImagesSO
   m_EditorClassIdentifier: 
-  ending: 
+  ending: Mating

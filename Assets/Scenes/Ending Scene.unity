@@ -285,7 +285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5362292703166988329, guid: e07fb573df5726e40b81a2a971fb097e, type: 3}
+  m_Sprite: {fileID: -8201018280859087999, guid: 132143f447461d64ba3892d1276d7d9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -557,7 +557,7 @@ MonoBehaviour:
   images: []
   EndingPanel: {fileID: 1461839938}
   force: 0
-  stringdeath: Stove
+  stringdeath: Mating
   DEVMODE: 0
   Toilet: {fileID: 1461839938}
   Stove: {fileID: 569876970}

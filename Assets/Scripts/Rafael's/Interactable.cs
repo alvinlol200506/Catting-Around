@@ -72,8 +72,7 @@ public class HoldInteractable : MonoBehaviour
             isPlayerInRange = true;
             if (progressBar != null)
                 progressBar.gameObject.SetActive(true);
-            if (InteractPrompt != null)
-                InteractPrompt.gameObject.SetActive(true);
+            
         }
     }
 
@@ -84,8 +83,7 @@ public class HoldInteractable : MonoBehaviour
             isPlayerInRange = false;
             if (progressBar != null)
                 progressBar.gameObject.SetActive(false); 
-            if (InteractPrompt != null)
-                InteractPrompt.gameObject.SetActive(false); 
+            
         }
     }
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Reflection;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,19 +12,17 @@ using Debug = UnityEngine.Debug;
 public class EndingScript : MonoBehaviour
 {
 
-    [SerializeField] public List<Sprite> images = new List<Sprite>();
-     [SerializeField] GameObject EndingPanel;
-    [SerializeField] int force;
-     [SerializeField] string stringdeath;
+    [SerializeField] string stringdeath;
     [SerializeField] bool DEVMODE;
-    UnityEngine.UI.Image imagenya;
     String death;
 
     [SerializeField] GameObject Toilet;
     [SerializeField] GameObject Stove;
     [SerializeField] GameObject Catnip;
     [SerializeField] GameObject Mating;
-
+    [SerializeField] GameObject Goodboy;
+    [SerializeField] GameObject Missing;
+    
     [SerializeField] EndingImagesSO so;
 
     private IEnumerator Start()
@@ -45,7 +44,6 @@ public class EndingScript : MonoBehaviour
         if (death == "High")
         {
             Catnip.SetActive(true);
-
         }
         else if (death == "Toilet")
         {
@@ -58,6 +56,14 @@ public class EndingScript : MonoBehaviour
         else if (death == "Mating")
         {
             Mating.SetActive(true);
+        }
+        else if (death == "Good Boy")
+        {
+            Goodboy.SetActive(true);
+        }
+        else if (death=="Missing")
+        {
+            Missing.SetActive(true);
         }
         
         

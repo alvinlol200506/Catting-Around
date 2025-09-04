@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LogicScript : MonoBehaviour
 {
+    [SerializeField] private float time = 60f; // default 1 minute
+
+    private float timer;
+    private bool timerActive = false;
 
     public int health;
     public int maxHealth=10;
@@ -15,6 +20,9 @@ public class LogicScript : MonoBehaviour
     RectTransform fillrect;
     [SerializeField] EndingImagesSO es;
 
+    public TextMeshProUGUI DisplayTime;
+
+    private bool isPlayerInTrigger = false; // Add this field
 
     public void HealthEdit(int x, string sumber)
     {
@@ -28,13 +36,15 @@ public class LogicScript : MonoBehaviour
 
         updatebar();
 
-        
+
     }
     void Start()
     {
         fillrect = healthbar.rectTransform;
         health = maxHealth;
         updatebar();
+        timer = time;
+        timerActive = true;
     }
 
     void updatebar() { 
@@ -44,42 +54,60 @@ public class LogicScript : MonoBehaviour
         fillrect.sizeDelta = size;
     }
 
-
-
-
-
-
-
-
-
-    public Dictionary<string, bool> interactedMap = new Dictionary<string, bool>();
-    
-   
-    [SerializeField] private List<string> interactionIds = new List<string>(); // Akan tampil di Inspector
-
-    public void RegisterInteraction(string id)
+    // These methods should be on the trigger collider object, or you can move them here if LogicScript is attached to the trigger
+    private void OnTriggerEnter2D(Collider2D other)
     {
-
-        if (!interactedMap.ContainsKey(id))
+        if (other.CompareTag("Player")) // Make sure your player GameObject has the "Player" tag
         {
-            interactedMap[id] = true; 
+            isPlayerInTrigger = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInTrigger = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (timerActive)
+        {
+            timer -= Time.deltaTime;
+            timer = Mathf.Max(timer, 0f);
+
+            int minutes = Mathf.FloorToInt(timer / 60f);
+            int seconds = Mathf.FloorToInt(timer % 60f);
+            DisplayTime.SetText(string.Format("{0:00}:{1:00}", minutes, seconds));
+
+            if (timer <= 0f)
+            {
+                timerActive = false;
+                end();
+            }
+        }
+    }
+
+    private void end()
+    {
+        if (isPlayerInTrigger)
+        {
+            es.ending = "Missing";
         }
         else
         {
-            interactedMap[id] = !interactedMap[id]; 
+            es.ending = "Good Boy";
         }
-
-    interactionIds.Add(id);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
 
     }
 
 
 
 
-    public Dictionary<string, bool> GetInteractions()
-    {
-        return interactedMap;
-    }
+    
 
 
 }

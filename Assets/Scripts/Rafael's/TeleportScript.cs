@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TeleportScript : InteractionTrigger
 {
-   
+    
     public GameObject to;
 
     public override void InteractTrigger()

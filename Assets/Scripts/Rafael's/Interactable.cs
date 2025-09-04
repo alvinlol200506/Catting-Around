@@ -99,7 +99,6 @@ public class HoldInteractable : MonoBehaviour
             changeSprite.toggleSprite();
         }
 
-        logicScript.RegisterInteraction(name);
 
         if (trigger != null)
         {

@@ -148,6 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c84cec69720a5498b6da458c79fe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  images:
+  - {fileID: -4910088520043721169, guid: b24a26db2990f4e4d93faf7143b98587, type: 3}
+  - {fileID: -4983721108374671077, guid: 456931d924d0f3d4099b6aaeb751b1fe, type: 3}
+  - {fileID: 4008735589027819208, guid: 75b4ad026dd1a904c81ea682ed31787d, type: 3}
+  EndingPanel: {fileID: 1461839938}
 --- !u!4 &606245828
 Transform:
   m_ObjectHideFlags: 0

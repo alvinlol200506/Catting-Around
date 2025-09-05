@@ -61,7 +61,9 @@ public class HoldInteractable : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.E))
             {
-                progressBar.value = 0;
+                holdProgress = 0;
+                  if (progressBar != null)
+                    progressBar.value = holdProgress; 
             }
         }
 

@@ -13,11 +13,16 @@ public class LogicScript : MonoBehaviour
     private bool timerActive = false;
 
     public int health;
+    public int enemyHealth;
     public int maxHealth=10;
+    public int EnemyMaxHealth=10;
     public int CatnipMeter = 0;
     public bool wet;
     public Image healthbar;
+    public Image enemyHealthbar;
+    public GameObject QTE;
     RectTransform fillrect;
+    RectTransform enemyFillrect;
     [SerializeField] EndingImagesSO es;
 
     public TextMeshProUGUI DisplayTime;
@@ -35,13 +40,24 @@ public class LogicScript : MonoBehaviour
         }
 
         updatebar();
-
-
     }
+    public void EnemyHealthEdit(int x)
+    {
+        enemyHealth += x;
+        if (enemyHealth <= 0)
+        {
+            QTE.SetActive(false);
+        }
+        
+        updateEnemyBar();
+    }
+
     void Start()
     {
         fillrect = healthbar.rectTransform;
+        enemyFillrect = enemyHealthbar.rectTransform;
         health = maxHealth;
+        enemyHealth = EnemyMaxHealth;
         updatebar();
         timer = time;
         timerActive = true;
@@ -52,6 +68,14 @@ public class LogicScript : MonoBehaviour
         var size = fillrect.sizeDelta;
         size.x = ratio * 110f;
         fillrect.sizeDelta = size;
+    }
+
+    void updateEnemyBar()
+    {
+        float ratio = (float)enemyHealth / EnemyMaxHealth;
+        var size = enemyFillrect.sizeDelta;
+        size.x = ratio * 110f;
+        enemyFillrect.sizeDelta = size;
     }
 
     // These methods should be on the trigger collider object, or you can move them here if LogicScript is attached to the trigger

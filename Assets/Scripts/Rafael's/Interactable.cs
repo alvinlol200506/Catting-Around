@@ -59,6 +59,10 @@ public class HoldInteractable : MonoBehaviour
                     
                 }
             }
+            if (Input.GetKeyUp(KeyCode.E))
+            {
+                progressBar.value = 0;
+            }
         }
 
 

@@ -15,7 +15,6 @@ public class HighScript : InteractionTrigger
     [SerializeField] int CatnipLick = 0;
     LogicScript ls;
     [SerializeField] EndingImagesSO end;
-    [SerializeField] SoundEffectScript ses;
 
     void Start()
     {
@@ -39,9 +38,6 @@ public class HighScript : InteractionTrigger
 
     public void OneMoreLick()
     {
-        
-        ses.lickEffect();
-
         if (vignette != null)
             vignette.intensity.value += 0.05f;
         if (bloom != null)

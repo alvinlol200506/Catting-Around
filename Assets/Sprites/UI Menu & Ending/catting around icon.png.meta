@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 5f9f0b0058cc1a1418ce7908111c9543
+guid: 492825658b283bf439814cb76008ad70
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4499683991593526787
-    second: Cakar 1_0002_0
-  - first:
-      213: -2887361346432690421
-    second: Cakar 1_0002_1
-  - first:
-      213: -6646240492349492636
-    second: Cakar 1_0002_2
+      213: 694129805115818702
+    second: catting around icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cakar 1_0002_0
+      name: catting around icon_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 61
-        width: 165
-        height: 272
+        x: 8
+        y: 11
+        width: 1070
+        height: 417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df95e8fff39ed81c0800000000000000
-      internalID: -4499683991593526787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cakar 1_0002_1
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 34
-        width: 159
-        height: 274
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b079faf37280ee7d0800000000000000
-      internalID: -2887361346432690421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cakar 1_0002_2
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 18
-        width: 136
-        height: 233
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 462f0b94c7fc3c3a0800000000000000
-      internalID: -6646240492349492636
+      spriteID: ec280fd416b02a900800000000000000
+      internalID: 694129805115818702
       vertices: []
       indices: 
       edges: []
@@ -188,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cakar 1_0002_0: -4499683991593526787
-      Cakar 1_0002_1: -2887361346432690421
-      Cakar 1_0002_2: -6646240492349492636
+      catting around icon_0: 694129805115818702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

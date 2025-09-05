@@ -1,12 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Reflection;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Debug = UnityEngine.Debug;
 
 public class EndingScript : MonoBehaviour

@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stringdeath: Toilet
-  DEVMODE: 1
+  DEVMODE: 0
   Toilet: {fileID: 1461839938}
   Stove: {fileID: 569876970}
   Catnip: {fileID: 911693437}

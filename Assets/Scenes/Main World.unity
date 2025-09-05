@@ -5149,6 +5149,7 @@ GameObject:
   - component: {fileID: 1468930654}
   - component: {fileID: 1468930655}
   - component: {fileID: 1468930656}
+  - component: {fileID: 1468930657}
   m_Layer: 0
   m_Name: Kucing Jahat
   m_TagString: Untagged
@@ -5328,6 +5329,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QTE: {fileID: 1318639204}
+--- !u!114 &1468930657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468930650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac687be050f9654d9b307c99aae7328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 3340507467102694175}
+  animator: {fileID: 3340507467102694172}
 --- !u!1 &1474512611
 GameObject:
   m_ObjectHideFlags: 0
@@ -8887,6 +8902,17 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &3340507467102694175 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+  m_PrefabInstance: {fileID: 3340507467102694164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684799405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bc4830affd8914cae09136513574be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3414431993212462119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9111242801236139270, guid: 4103fc8b5fca4bd42a6281440a8e0b76, type: 3}

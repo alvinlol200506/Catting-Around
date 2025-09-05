@@ -7,7 +7,6 @@ public class TeleportScript : InteractionTrigger
     
     public GameObject to;
     public SoundtrackScript sts;
-    public SoundEffectScript ses;
 
     public override void InteractTrigger()
     {
@@ -16,7 +15,6 @@ public class TeleportScript : InteractionTrigger
         if (sts != null)
         {
             sts.togglesound();
-            ses.windowEffect();
         }
     }
 }

@@ -1259,6 +1259,7 @@ MonoBehaviour:
   safeZone: {fileID: 1474512612}
   moveSpeed: 2000
   QTE: {fileID: 1318639204}
+  animator: {fileID: 1468930651}
 --- !u!1 &289802381
 GameObject:
   m_ObjectHideFlags: 0

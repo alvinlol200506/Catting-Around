@@ -8649,7 +8649,7 @@ PrefabInstance:
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: sr
       value: 
-      objectReference: {fileID: 3340507467102694173}
+      objectReference: {fileID: 0}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: tr
       value: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hatsune-miku-miku-hatsune_0: -4103452545846906150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

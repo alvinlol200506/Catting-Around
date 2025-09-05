@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private BoxCollider2D playerCollider;
     [SerializeField] private Animator animator;
+    [SerializeField] private TrailRenderer tr;
 
     [Header("Cat power")]
     [SerializeField] float speed;
@@ -27,10 +28,21 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private float moveInput;
 
+    private bool canDash = true;
+    private bool isDashing;
+    private float dashingPower = 24f;
+    private float dashingTime = 0.2f;
+    private float dashingCooldown = 1f;
+
 
 
     void Update()
     {
+        if(isDashing)
+        {
+            return;
+        }
+
         moveInput = Input.GetAxisRaw("Horizontal");
         FaceMoveDirection();
         Jump();
@@ -47,10 +59,20 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(DisableCollision());
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+        {
+            StartCoroutine(Dash());
+        }
     }
 
     void FixedUpdate()
     {
+        if (isDashing)
+        {
+            return;
+        }
+
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);    
     }
 
@@ -120,5 +142,21 @@ public class PlayerMovement : MonoBehaviour
         Physics2D.IgnoreCollision(playerCollider, platformCollider);
         yield return new WaitForSeconds(0.4f);
         Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
+    }
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.linearVelocity = new Vector2(transform.localScale.x * dashingPower, 0f);
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
     }
 }

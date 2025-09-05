@@ -6,5 +6,6 @@ public class QTEactivator : InteractionTrigger
     public override void InteractTrigger()
     {
         QTE.SetActive(true);
+
     }
 }

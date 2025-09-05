@@ -47,6 +47,7 @@ public class LogicScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             QTE.SetActive(false);
+
         }
         
         updateEnemyBar();

@@ -14,5 +14,10 @@ public class MainMenuScript : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
-     }
+    }
+
+    public void Mainmenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

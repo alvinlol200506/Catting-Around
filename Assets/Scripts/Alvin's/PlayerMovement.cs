@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDash = true;
     private bool isDashing;
+    public bool canMove=true;
     
 
 

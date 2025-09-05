@@ -9,7 +9,7 @@ public class BreedingScript : InteractionTrigger
      [SerializeField] GameObject lope2;
      [SerializeField] GameObject lope3;
      [SerializeField] GameObject lope4;
-
+     [SerializeField] SoundEffectScript ses;
 
     int BreedCount;
     public EndingImagesSO so;
@@ -23,6 +23,7 @@ public class BreedingScript : InteractionTrigger
     public void Breed()
     {
         BreedCount++;
+        ses.breedEffect();
 
         if (BreedCount == 1)
             lope1.SetActive(true);

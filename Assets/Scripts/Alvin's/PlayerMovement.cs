@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     
-
+   public SoundEffectScript ses;
 
 
     void Update()
@@ -78,15 +78,19 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);    
     }
 
+
+ 
     void Jump()
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
         if (isGrounded == true && Input.GetButtonDown("Jump"))
         {
+            ses.jumpEffect();
             isJumping = true;
             jumpTime = jumpStartTime;
             rb.linearVelocity = Vector2.up * jumpForce;
+
         }
 
         if (Input.GetButton("Jump") && isJumping == true)

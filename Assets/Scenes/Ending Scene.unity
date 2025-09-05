@@ -960,8 +960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c84cec69720a5498b6da458c79fe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringdeath: 
-  DEVMODE: 0
+  stringdeath: Toilet
+  DEVMODE: 1
   Toilet: {fileID: 1461839938}
   Stove: {fileID: 569876970}
   Catnip: {fileID: 911693437}
@@ -1307,7 +1307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4910088520043721169, guid: b24a26db2990f4e4d93faf7143b98587, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b81a2d77e67917d48ba7182e49cfd149, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

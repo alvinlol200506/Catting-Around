@@ -138,6 +138,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -484,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Objek Lantai1_0: 2123754947850273001
+      Objek Lantai1_1: 1626969667234726884
+      Objek Lantai1_10: -5660238561794195227
+      Objek Lantai1_11: 9085966129589152058
+      Objek Lantai1_12: 1029371519882028917
+      Objek Lantai1_13: -3042579779522946347
+      Objek Lantai1_14: 821660449126640485
+      Objek Lantai1_2: 8825478855281360258
+      Objek Lantai1_3: -2142071834745994171
+      Objek Lantai1_4: 5872671178198847490
+      Objek Lantai1_5: 6564038487717954261
+      Objek Lantai1_6: 4418870017681329641
+      Objek Lantai1_7: -8771225868265999603
+      Objek Lantai1_8: -855198706309953386
+      Objek Lantai1_9: 603001536929100546
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

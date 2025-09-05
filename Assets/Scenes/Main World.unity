@@ -385,6 +385,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1468930650}
     - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
+      propertyPath: enemyAnimator
+      value: 
+      objectReference: {fileID: 1468930651}
+    - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
       propertyPath: enemyHealthbar
       value: 
       objectReference: {fileID: 969698486}
@@ -5570,6 +5574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac687be050f9654d9b307c99aae7328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beingAttacked: 0
   animator: {fileID: 3340507467102694172}
   QTE: {fileID: 1318639204}
 --- !u!1 &1474512611

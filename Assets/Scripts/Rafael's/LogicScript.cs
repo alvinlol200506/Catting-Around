@@ -25,8 +25,9 @@ public class LogicScript : MonoBehaviour
     RectTransform enemyFillrect;
     [SerializeField] EndingImagesSO es;
 
-    public GameObject kucingJahat;
+    //public GameObject kucingJahat;
     public EnemyScript enemyScript;
+    [SerializeField] private Animator enemyAnimator;
 
 
     public TextMeshProUGUI DisplayTime;
@@ -51,7 +52,8 @@ public class LogicScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             QTE.SetActive(false);
-            enemyScript.enabled = false;
+            enemyScript.beingAttacked = false;
+            enemyAnimator.SetTrigger("Enemy Dead");
         }
 
         updateEnemyBar();

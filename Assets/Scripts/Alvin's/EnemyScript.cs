@@ -6,7 +6,7 @@ public class EnemyScript : InteractionTrigger
 {
     LogicScript ls;
     public bool beingAttacked = false;
-    //public Component playerMovement;
+    public PlayerMovement playerMovement;
     [SerializeField] private Animator animator;
     public GameObject QTE;
 
@@ -15,7 +15,7 @@ public class EnemyScript : InteractionTrigger
         QTE.SetActive(true);
         ls = FindObjectOfType<LogicScript>();
         beingAttacked = true;
-        //playerMovement.enabled = false;
+      // playerMovement.canMove = false;
         StartCoroutine(Attacked());
     }
 

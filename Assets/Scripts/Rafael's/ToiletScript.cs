@@ -3,6 +3,7 @@ using UnityEngine;
 public class ToiletScript : InteractionTrigger
 {
     LogicScript ls;
+    public SoundEffectScript ses;
 
     void Start()
     {
@@ -10,6 +11,7 @@ public class ToiletScript : InteractionTrigger
     }
     public override void InteractTrigger()
     {
+        ses.toiletEffect();
         ls.HealthEdit(-2, name);
      }
 }

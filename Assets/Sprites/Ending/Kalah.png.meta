@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2e1706978d9773742a6d7adbf7439ee6
+guid: afd415f52cd47b540a722ab319954403
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8351117177474317782
-    second: Lantai 1 warna_0
+      213: -5261584303323822376
+    second: Kalah_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lantai 1 warna_0
+      name: Stove_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 7000
+        width: 1920
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ddf409a3d025e370800000000000000
-      internalID: 8351117177474317782
+      spriteID: 1c409699a5a042c80800000000000000
+      internalID: -8348536425000926015
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lantai 1 warna_0: 8351117177474317782
+      Stove_0: -8348536425000926015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

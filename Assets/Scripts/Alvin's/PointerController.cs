@@ -8,6 +8,7 @@ public class PointerController : MonoBehaviour
     public float moveSpeed = 100f; // Speed of the pointer movement
     [SerializeField] GameObject QTE;
     LogicScript ls;
+    [SerializeField] private Animator animator;
 
 
     private float direction = 1f; // 1 for moving towards B, -1 for moving towards A
@@ -52,6 +53,7 @@ public class PointerController : MonoBehaviour
         {
             ls.EnemyHealthEdit(-1);
             Debug.Log("Success!");
+            animator.SetTrigger("Hit");
         }
         else
         {

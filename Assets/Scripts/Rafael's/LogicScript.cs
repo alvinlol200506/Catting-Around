@@ -25,6 +25,10 @@ public class LogicScript : MonoBehaviour
     RectTransform enemyFillrect;
     [SerializeField] EndingImagesSO es;
 
+    public GameObject kucingJahat;
+    public EnemyScript enemyScript;
+
+
     public TextMeshProUGUI DisplayTime;
 
     private bool isPlayerInTrigger = false; // Add this field
@@ -47,9 +51,9 @@ public class LogicScript : MonoBehaviour
         if (enemyHealth <= 0)
         {
             QTE.SetActive(false);
-
+            enemyScript.enabled = false;
         }
-        
+
         updateEnemyBar();
     }
 

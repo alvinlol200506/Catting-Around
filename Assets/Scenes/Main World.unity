@@ -377,6 +377,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1521903970}
     - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
+      propertyPath: enemyScript
+      value: 
+      objectReference: {fileID: 1468930657}
+    - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
+      propertyPath: kucingJahat
+      value: 
+      objectReference: {fileID: 1468930650}
+    - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
       propertyPath: enemyHealthbar
       value: 
       objectReference: {fileID: 969698486}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a9f9093041f4b0d46b648bf7663f3f25
+guid: 70ef967f0bde3404f973b12a91170078
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7363483107624292243
-    second: WC_0
+      213: -3222673683238408529
+    second: Background Toiletto_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WC_0
+      name: Background Toiletto_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39f098b7fd8503660800000000000000
-      internalID: 7363483107624292243
+      spriteID: fae239b0c53c643d0800000000000000
+      internalID: -3222673683238408529
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WC_0: 7363483107624292243
+      Background Toiletto_0: -3222673683238408529
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -304,7 +304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4103452545846906150, guid: e1abe80353bd2bb4e802652c5898f04c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d9e003df3be4564585da1cde21011a6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7988057507242172844, guid: 8a5cf7595952c8b4fa36377aced799a1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60cdaf38028f4b24197371ce058ab636, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -691,7 +691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8201018280859087999, guid: 132143f447461d64ba3892d1276d7d9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 132143f447461d64ba3892d1276d7d9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4983721108374671077, guid: 456931d924d0f3d4099b6aaeb751b1fe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a121541ad79b7b64b8170073280024f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -960,8 +960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c84cec69720a5498b6da458c79fe4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stringdeath: Missing
-  DEVMODE: 1
+  stringdeath: 
+  DEVMODE: 0
   Toilet: {fileID: 1461839938}
   Stove: {fileID: 569876970}
   Catnip: {fileID: 911693437}
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4008735589027819208, guid: 75b4ad026dd1a904c81ea682ed31787d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25fb2aafdd47e9c45924171499492e9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

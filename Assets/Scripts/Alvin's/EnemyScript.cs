@@ -12,7 +12,6 @@ public class EnemyScript : InteractionTrigger
     {
         ls = FindObjectOfType<LogicScript>();
         beingAttacked = true;
-        PlayerMovement.canMove = false;
         StartCoroutine(Attacked());
     }
 

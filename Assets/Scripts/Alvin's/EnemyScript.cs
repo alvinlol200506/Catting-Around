@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyScript : InteractionTrigger
 {
     LogicScript ls;
-    private bool beingAttacked = false;
+    public bool beingAttacked = false;
     //public Component playerMovement;
     [SerializeField] private Animator animator;
     public GameObject QTE;

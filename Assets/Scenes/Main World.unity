@@ -297,6 +297,7 @@ MonoBehaviour:
   volume: {fileID: 1177461736}
   CatnipLick: 0
   end: {fileID: 11400000, guid: 332d923a1d3699945beb192b8da63f87, type: 2}
+  ses: {fileID: 0}
 --- !u!4 &44550168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 847853125184216426, guid: 82b642bb39442bb4c864d16cccbe7b45, type: 3}
@@ -1585,10 +1586,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4015293342031533735, guid: 64a171ba54367cf4f97e8bbdcb909327, type: 3}
+      propertyPath: ses
+      value: 
+      objectReference: {fileID: 3340507467102694175}
     - target: {fileID: 5417490684371399486, guid: 64a171ba54367cf4f97e8bbdcb909327, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7654764866597878155, guid: 64a171ba54367cf4f97e8bbdcb909327, type: 3}
+      propertyPath: ses
+      value: 
+      objectReference: {fileID: 3340507467102694175}
     - target: {fileID: 8331590364236611923, guid: 64a171ba54367cf4f97e8bbdcb909327, type: 3}
       propertyPath: m_text
       value: Hold E to open Bathroom
@@ -2296,7 +2305,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41372386, y: 1.16545, z: -10}
+  m_LocalPosition: {x: 0.41452983, y: 1.16545, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5898,6 +5907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingAttacked: 0
+  playerMovement: {fileID: 0}
   animator: {fileID: 3340507467102694172}
   QTE: {fileID: 1318639204}
 --- !u!1 &1474512611
@@ -6355,6 +6365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   to: {fileID: 243049554}
   sts: {fileID: 0}
+  ses: {fileID: 0}
 --- !u!1 &1557064638
 GameObject:
   m_ObjectHideFlags: 0
@@ -6718,6 +6729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   to: {fileID: 947478330}
   sts: {fileID: 0}
+  ses: {fileID: 0}
 --- !u!1 &1674116758
 GameObject:
   m_ObjectHideFlags: 0
@@ -7694,6 +7706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3010e10e4afba248b730c2c7160d6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ses: {fileID: 0}
 --- !u!1 &1965227033
 GameObject:
   m_ObjectHideFlags: 0
@@ -8668,6 +8681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   to: {fileID: 193173281}
   sts: {fileID: 942296870}
+  ses: {fileID: 3340507467102694175}
 --- !u!4 &2133649676 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 847853125184216426, guid: 82b642bb39442bb4c864d16cccbe7b45, type: 3}
@@ -8849,6 +8863,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4122063873945525204, guid: 4103fc8b5fca4bd42a6281440a8e0b76, type: 3}
+      propertyPath: ses
+      value: 
+      objectReference: {fileID: 3340507467102694175}
     - target: {fileID: 7507732570272933885, guid: 4103fc8b5fca4bd42a6281440a8e0b76, type: 3}
       propertyPath: logicScript
       value: 
@@ -9190,6 +9208,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1616070971085468284, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3340507467102694174}
+    - targetCorrespondingSourceObject: {fileID: 1616070971085468284, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3340507467102694175}
+    - targetCorrespondingSourceObject: {fileID: 1616070971085468284, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3340507467102694176}
   m_SourcePrefab: {fileID: 100100000, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
 --- !u!4 &3340507467102694165 stripped
 Transform:
@@ -9389,6 +9413,124 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &3340507467102694175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684799405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3041fa5a5f174224e8f8d49ffaf3e236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jump: {fileID: 8300000, guid: 6cf4016e82889ba458f977e8e3895f24, type: 3}
+  lick: {fileID: 8300000, guid: 08dd5210b8458b74ca2f67c93c0331e7, type: 3}
+  damage: {fileID: 8300000, guid: 4675107211efab74abae376eb169d549, type: 3}
+  attack: {fileID: 8300000, guid: cb452dda1158fe04bad7746c093c0546, type: 3}
+  breed: {fileID: 8300000, guid: 51cc9c88e47e6bc4ab93e8b10520c520, type: 3}
+  window: {fileID: 8300000, guid: cfab5650a0e7d6843ac21b83587571a7, type: 3}
+  toilet: {fileID: 8300000, guid: 08dd5210b8458b74ca2f67c93c0331e7, type: 3}
+  pintu: {fileID: 8300000, guid: d339288a76a81c0438ab7fa0c888a9c0, type: 3}
+  AS: {fileID: 3340507467102694176}
+--- !u!82 &3340507467102694176
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684799405}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3414431993212462119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9111242801236139270, guid: 4103fc8b5fca4bd42a6281440a8e0b76, type: 3}

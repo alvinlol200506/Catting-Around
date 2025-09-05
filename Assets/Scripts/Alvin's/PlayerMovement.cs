@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
     private float jumpTime;
     private bool isJumping;
     private float moveInput;
-    public bool canMove = true;
 
     private bool canDash = true;
     private bool isDashing;
@@ -45,12 +44,10 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (canMove)
-        {
             moveInput = Input.GetAxisRaw("Horizontal");
             FaceMoveDirection();
             Jump();
-        }
+        
         
 
         animator.SetBool("Moving", Mathf.Abs(moveInput) > 0.01f);

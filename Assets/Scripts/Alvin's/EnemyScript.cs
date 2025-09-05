@@ -8,11 +8,14 @@ public class EnemyScript : InteractionTrigger
     private bool beingAttacked = false;
     public PlayerMovement playerMovement;
     [SerializeField] private Animator animator;
+    public GameObject QTE;
+
     public override void InteractTrigger()
     {
+        QTE.SetActive(true);
         ls = FindObjectOfType<LogicScript>();
         beingAttacked = true;
-        PlayerMovement.canMove = false;
+        playerMovement.canMove = false;
         StartCoroutine(Attacked());
     }
 

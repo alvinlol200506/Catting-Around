@@ -78,6 +78,10 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
+        if (!canMove)
+        { 
+            rb.linearVelocity = new Vector2( 0,0);
+        }
 
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);    
     }

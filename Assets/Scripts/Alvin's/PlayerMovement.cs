@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Cat power")]
     [SerializeField] float speed;
     [SerializeField] float jumpForce;
+    [SerializeField] private float dashingPower = 24f;
+    [SerializeField] private float dashingTime = 0.2f;
+    [SerializeField] private float dashingCooldown = 1f;
 
     [Header("Grounding")]
     [SerializeField] private Transform feetPos;
@@ -30,9 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDash = true;
     private bool isDashing;
-    private float dashingPower = 24f;
-    private float dashingTime = 0.2f;
-    private float dashingCooldown = 1f;
+    
 
 
 

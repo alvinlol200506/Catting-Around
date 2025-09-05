@@ -6669,6 +6669,10 @@ PrefabInstance:
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+      propertyPath: dashingPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: jumpStartTime
       value: 0.3
       objectReference: {fileID: 0}

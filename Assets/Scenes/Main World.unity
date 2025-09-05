@@ -1537,14 +1537,14 @@ RectTransform:
   m_GameObject: {fileID: 458077762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.61698, y: 0.61698, z: 0.61698}
+  m_LocalScale: {x: 0.3733963, y: 0.3733963, z: 0.3733963}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 560739335}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62.5, y: -89.5}
+  m_AnchoredPosition: {x: 38.7, y: -63.9}
   m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458077764
@@ -4576,7 +4576,7 @@ Transform:
   m_GameObject: {fileID: 1369343106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.62, y: 2.08, z: 0}
+  m_LocalPosition: {x: 58.6, y: 2.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1.8014}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5501,7 +5501,7 @@ Transform:
   m_GameObject: {fileID: 1558004248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.82, y: 3.19, z: 0}
+  m_LocalPosition: {x: 49.82, y: 3.196, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6680,7 +6680,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 1
   m_CompositeOrder: 0
-  m_Offset: {x: 32.007385, y: 1.9864507}
+  m_Offset: {x: 31.989422, y: 1.990021}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6690,7 +6690,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 20.110718, y: 4.548213}
+  m_Size: {x: 20.007881, y: 4.3137937}
   m_EdgeRadius: 0
 --- !u!61 &1988467847
 BoxCollider2D:
@@ -6726,7 +6726,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 1
   m_CompositeOrder: 0
-  m_Offset: {x: -13.317578, y: -0.07490158}
+  m_Offset: {x: -13.218645, y: -0.09290266}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6736,7 +6736,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 26.376802, y: 4.32565}
+  m_Size: {x: 26.400127, y: 4.3154364}
   m_EdgeRadius: 0
 --- !u!66 &1988467848
 CompositeCollider2D:
@@ -6779,34 +6779,34 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1988467847}
     m_ColliderPaths:
-    - - X: -1291770
-        Y: 20879236
-      - X: -265059792
-        Y: 20879236
-      - X: -265059792
-        Y: -22377266
-      - X: -1291770
-        Y: -22377266
+    - - X: -185813
+        Y: 20648156
+      - X: -264187088
+        Y: 20648156
+      - X: -264187088
+        Y: -22506208
+      - X: -185813
+        Y: -22506208
   - m_Collider: {fileID: 1988467846}
     m_ColliderPaths:
-    - - X: 420627456
-        Y: 42605572
-      - X: 219520256
-        Y: 42605572
-      - X: 219520256
-        Y: -2876558
-      - X: 420627456
-        Y: -2876558
+    - - X: 419933632
+        Y: 41469180
+      - X: 219854816
+        Y: 41469180
+      - X: 219854816
+        Y: -1668758
+      - X: 419933632
+        Y: -1668758
   m_CompositePaths:
     m_Paths:
-    - - {x: 42.062717, y: -0.2876558}
-      - {x: 42.062717, y: 4.260557}
-      - {x: 21.952026, y: 4.260528}
-      - {x: 21.952055, y: -0.2876558}
-    - - {x: -0.1292063, y: -2.2377267}
-      - {x: -0.1292063, y: 2.0879235}
-      - {x: -26.50598, y: 2.0878944}
-      - {x: -26.50595, y: -2.2377267}
+    - - {x: 41.993336, y: -0.1668758}
+      - {x: 41.993336, y: 4.146918}
+      - {x: 21.985481, y: 4.1468887}
+      - {x: 21.98551, y: -0.1668758}
+    - - {x: -0.0186106, y: -2.2506208}
+      - {x: -0.0186106, y: 2.0648155}
+      - {x: -26.418709, y: 2.0647864}
+      - {x: -26.41868, y: -2.2506208}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -8106,6 +8106,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 1931352674}
+  - {fileID: 1988467850}
   - {fileID: 2103886754}
   - {fileID: 806535767}
   - {fileID: 3340507467102694164}
@@ -8146,4 +8147,3 @@ SceneRoots:
   - {fileID: 1129188921}
   - {fileID: 1630181312}
   - {fileID: 1468930653}
-  - {fileID: 1988467850}

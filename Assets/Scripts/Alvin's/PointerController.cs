@@ -7,6 +7,8 @@ public class PointerController : MonoBehaviour
     public RectTransform safeZone; // Reference to the safe zone RectTransform
     public float moveSpeed = 100f; // Speed of the pointer movement
     [SerializeField] GameObject QTE;
+    LogicScript ls;
+
 
     private float direction = 1f; // 1 for moving towards B, -1 for moving towards A
     private RectTransform pointerTransform;
@@ -16,6 +18,7 @@ public class PointerController : MonoBehaviour
     {
         pointerTransform = GetComponent<RectTransform>();
         targetPosition = pointB.position;
+        ls = FindObjectOfType<LogicScript>();
     }
 
     void Update()
@@ -47,6 +50,7 @@ public class PointerController : MonoBehaviour
         // Check if the pointer is within the safe zone
         if (RectTransformUtility.RectangleContainsScreenPoint(safeZone, pointerTransform.position, null))
         {
+            ls.EnemyHealthEdit(-1);
             Debug.Log("Success!");
         }
         else

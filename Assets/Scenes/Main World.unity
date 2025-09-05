@@ -365,6 +365,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 332d923a1d3699945beb192b8da63f87, type: 2}
     - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
+      propertyPath: QTE
+      value: 
+      objectReference: {fileID: 1318639204}
+    - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 1305552346}
@@ -372,6 +376,10 @@ PrefabInstance:
       propertyPath: DisplayTime
       value: 
       objectReference: {fileID: 1521903970}
+    - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
+      propertyPath: enemyHealthbar
+      value: 
+      objectReference: {fileID: 969698486}
     - target: {fileID: 8880212205763906450, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
       propertyPath: m_Name
       value: Game Logic
@@ -5553,7 +5561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ac687be050f9654d9b307c99aae7328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 0}
   animator: {fileID: 3340507467102694172}
   QTE: {fileID: 1318639204}
 --- !u!1 &1474512611
@@ -8435,8 +8442,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143338341}
   m_LocalRotation: {x: -0, y: -0, z: -0.0000004768371, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.36607492}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.60228}
+  m_LocalScale: {x: 0.022905, y: 0.022905, z: 2.2905}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 325146382}
@@ -8446,7 +8453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.11, y: -0.05}
+  m_AnchoredPosition: {x: -0.11, y: -0.24}
   m_SizeDelta: {x: 1106.5, y: 580.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143338343
@@ -8864,7 +8871,7 @@ PrefabInstance:
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: sr
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3340507467102694173}
     - target: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
       propertyPath: tr
       value: 

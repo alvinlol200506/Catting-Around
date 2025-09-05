@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDash = true;
     private bool isDashing;
-    public bool canMove=true;
     
 
 
@@ -45,10 +44,9 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-            moveInput = Input.GetAxisRaw("Horizontal");
-            FaceMoveDirection();
-            Jump();
-        
+        moveInput = Input.GetAxisRaw("Horizontal");
+        FaceMoveDirection();
+        Jump();
         
 
         animator.SetBool("Moving", Mathf.Abs(moveInput) > 0.01f);
@@ -75,10 +73,6 @@ public class PlayerMovement : MonoBehaviour
         if (isDashing)
         {
             return;
-        }
-        if (!canMove)
-        { 
-            rb.linearVelocity = new Vector2( 0,0);
         }
 
         rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);    

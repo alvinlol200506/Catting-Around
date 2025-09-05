@@ -5148,7 +5148,6 @@ GameObject:
   - component: {fileID: 1468930651}
   - component: {fileID: 1468930654}
   - component: {fileID: 1468930655}
-  - component: {fileID: 1468930656}
   - component: {fileID: 1468930657}
   m_Layer: 0
   m_Name: Kucing Jahat
@@ -5269,7 +5268,7 @@ MonoBehaviour:
   changeSprite: {fileID: 0}
   TwoWayInteract: 1
   name: Kucing Jahat
-  trigger: {fileID: 1468930656}
+  trigger: {fileID: 1468930657}
 --- !u!61 &1468930655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5316,19 +5315,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.792, y: 1.28}
   m_EdgeRadius: 0
---- !u!114 &1468930656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468930650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16de9289196556f42a1d21c7732854be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  QTE: {fileID: 1318639204}
 --- !u!114 &1468930657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5343,6 +5329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 3340507467102694175}
   animator: {fileID: 3340507467102694172}
+  QTE: {fileID: 1318639204}
 --- !u!1 &1474512611
 GameObject:
   m_ObjectHideFlags: 0

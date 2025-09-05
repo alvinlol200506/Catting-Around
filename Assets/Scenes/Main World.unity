@@ -1450,7 +1450,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 388919778611536844, guid: 64a171ba54367cf4f97e8bbdcb909327, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -57.6
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 3728535165886910758, guid: 64a171ba54367cf4f97e8bbdcb909327, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2178,7 +2178,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 1.97
+  orthographic size: 3.41
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2203,7 +2203,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.35000905, y: 1.16601, z: -10}
+  m_LocalPosition: {x: 0.4114584, y: 1.16545, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4391,7 +4391,7 @@ GameObject:
   - component: {fileID: 1144751140}
   - component: {fileID: 1144751139}
   m_Layer: 0
-  m_Name: Gambar WhatsApp 2025-08-31 pukul 14.25.39_29824815_0
+  m_Name: Background Dunya
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7285,7 +7285,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 1.97
+    OrthographicSize: 3.41
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -7609,7 +7609,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 1
   m_CompositeOrder: 0
-  m_Offset: {x: 31.989422, y: 1.990021}
+  m_Offset: {x: 31.989422, y: 1.9095056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7619,7 +7619,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 20.007881, y: 4.3137937}
+  m_Size: {x: 20.007881, y: 8.081902}
   m_EdgeRadius: 0
 --- !u!61 &1988467847
 BoxCollider2D:
@@ -7655,7 +7655,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 1
   m_CompositeOrder: 0
-  m_Offset: {x: -13.218645, y: -0.09290266}
+  m_Offset: {x: -13.239401, y: -0.4899838}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7665,7 +7665,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 26.400127, y: 4.3154364}
+  m_Size: {x: 26.359467, y: 7.9884744}
   m_EdgeRadius: 0
 --- !u!66 &1988467848
 CompositeCollider2D:
@@ -7708,34 +7708,34 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 1988467847}
     m_ColliderPaths:
-    - - X: -185813
-        Y: 20648156
-      - X: -264187088
-        Y: 20648156
-      - X: -264187088
-        Y: -22506208
-      - X: -185813
-        Y: -22506208
+    - - X: -596675
+        Y: 35042532
+      - X: -264191344
+        Y: 35042532
+      - X: -264191344
+        Y: -44842208
+      - X: -596675
+        Y: -44842208
   - m_Collider: {fileID: 1988467846}
     m_ColliderPaths:
     - - X: 419933632
-        Y: 41469180
+        Y: 59504568
       - X: 219854816
-        Y: 41469180
+        Y: 59504568
       - X: 219854816
-        Y: -1668758
+        Y: -21314452
       - X: 419933632
-        Y: -1668758
+        Y: -21314452
   m_CompositePaths:
     m_Paths:
-    - - {x: 41.993336, y: -0.1668758}
-      - {x: 41.993336, y: 4.146918}
-      - {x: 21.985481, y: 4.1468887}
-      - {x: 21.98551, y: -0.1668758}
-    - - {x: -0.0186106, y: -2.2506208}
-      - {x: -0.0186106, y: 2.0648155}
-      - {x: -26.418709, y: 2.0647864}
-      - {x: -26.41868, y: -2.2506208}
+    - - {x: 41.993336, y: -2.1314452}
+      - {x: 41.993336, y: 5.950457}
+      - {x: 21.985481, y: 5.9504275}
+      - {x: 21.98551, y: -2.1314452}
+    - - {x: -0.0596968, y: -4.484221}
+      - {x: -0.0596968, y: 3.5042531}
+      - {x: -26.419134, y: 3.504224}
+      - {x: -26.419106, y: -4.484221}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -9179,6 +9179,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1931352674}
   - {fileID: 1988467850}
+  - {fileID: 1144751140}
   - {fileID: 2103886754}
   - {fileID: 806535767}
   - {fileID: 3340507467102694164}
@@ -9215,7 +9216,6 @@ SceneRoots:
   - {fileID: 921000290}
   - {fileID: 1369343108}
   - {fileID: 1238743907}
-  - {fileID: 1144751140}
   - {fileID: 289802383}
   - {fileID: 1129188921}
   - {fileID: 1630181312}

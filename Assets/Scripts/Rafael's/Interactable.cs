@@ -31,12 +31,16 @@ public class HoldInteractable : MonoBehaviour
             progressBar.maxValue = holdDuration; 
             progressBar.value = holdProgress; 
         }
+        if (InteractPrompt != null)
+        {
+            InteractPrompt.gameObject.SetActive(false);
+        }
 
 
         if (string.IsNullOrEmpty(name))
         {
             name = gameObject.name;
-         } ;
+        } ;
     }
 
     void Update()
@@ -78,8 +82,14 @@ public class HoldInteractable : MonoBehaviour
             isPlayerInRange = true;
             if (progressBar != null)
                 progressBar.gameObject.SetActive(true);
-            
+                
+                if (InteractPrompt != null)
+            {
+                InteractPrompt.gameObject.SetActive(true);
+            }
+
         }
+        
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -89,6 +99,11 @@ public class HoldInteractable : MonoBehaviour
             isPlayerInRange = false;
             if (progressBar != null)
                 progressBar.gameObject.SetActive(false); 
+                
+                if (InteractPrompt != null)
+            {
+                InteractPrompt.gameObject.SetActive(false);
+            }
             
         }
     }

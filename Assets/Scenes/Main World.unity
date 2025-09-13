@@ -404,6 +404,10 @@ PrefabInstance:
       propertyPath: enemyHealthbar
       value: 
       objectReference: {fileID: 969698486}
+    - target: {fileID: 7297338195038991501, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 3340507467102694181}
     - target: {fileID: 8880212205763906450, guid: 9c2297a972a6c4344851fd50d6334fc5, type: 3}
       propertyPath: m_Name
       value: Game Logic
@@ -1082,7 +1086,7 @@ Transform:
   m_GameObject: {fileID: 193173281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.84, y: 1.9, z: 0}
+  m_LocalPosition: {x: 58.99, y: 1.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1499,6 +1503,9 @@ MonoBehaviour:
   moveSpeed: 2000
   QTE: {fileID: 1318639204}
   animator: {fileID: 1468930651}
+  animatorPlayer: {fileID: 3340507467102694172}
+  SlashEffect: {fileID: 5438536448247558244, guid: b3aba008175e0b74fa8fd7382d6e2d49, type: 3}
+  enemy: {fileID: 1468930650}
 --- !u!1 &289802381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,7 +2705,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41638696, y: 1.1603299, z: -10}
+  m_LocalPosition: {x: 0.41240966, y: 1.1603299, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6741,7 +6748,7 @@ MonoBehaviour:
   progressBar: {fileID: 325146381}
   InteractPrompt: {fileID: 1931910666}
   changeSprite: {fileID: 0}
-  TwoWayInteract: 1
+  TwoWayInteract: 0
   name: Kucing Jahat
   trigger: {fileID: 1468930657}
 --- !u!61 &1468930655
@@ -6803,7 +6810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingAttacked: 0
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 3340507467102694181}
   animator: {fileID: 3340507467102694172}
   QTE: {fileID: 1318639204}
 --- !u!1 &1474512611
@@ -10937,6 +10944,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3340507467102694181 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7725410839466722258, guid: d2b65302977fed348ab23d7074a3aead, type: 3}
+  m_PrefabInstance: {fileID: 3340507467102694164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684799405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bc4830affd8914cae09136513574be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3414431993212462119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9111242801236139270, guid: 4103fc8b5fca4bd42a6281440a8e0b76, type: 3}

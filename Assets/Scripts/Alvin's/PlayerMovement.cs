@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
 
     private bool canDash = true;
+    public bool canMove = true;
+
     private bool isDashing;
     
    public SoundEffectScript ses;
@@ -38,10 +40,12 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(isDashing)
-        {
+        if (!canMove)
             return;
-        }
+        if (isDashing)
+            {
+                return;
+            }
 
         moveInput = Input.GetAxisRaw("Horizontal");
         FaceMoveDirection();

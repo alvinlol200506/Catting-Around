@@ -9,7 +9,12 @@ public class PointerController : MonoBehaviour
     [SerializeField] GameObject QTE;
     LogicScript ls;
     [SerializeField] private Animator animator;
-     [SerializeField] private Animator animatorPlayer;
+    [SerializeField] private Animator animatorPlayer;
+    [SerializeField] private GameObject  SlashEffect;
+    [SerializeField] private GameObject  enemy;
+
+
+
 
 
     private float direction = 1f; // 1 for moving towards B, -1 for moving towards A
@@ -53,13 +58,14 @@ public class PointerController : MonoBehaviour
         if (RectTransformUtility.RectangleContainsScreenPoint(safeZone, pointerTransform.position, null))
         {
             ls.EnemyHealthEdit(-1);
-            Debug.Log("Success!");
+           // Debug.Log("Success!");
             animator.SetTrigger("Hit");
             animatorPlayer.SetTrigger("Attacks");
+            Instantiate(SlashEffect,enemy.transform.position,enemy.transform.rotation);
         }
         else
         {
-            Debug.Log("Fail!");
+            //Debug.Log("Fail!");
         }
     }
 }

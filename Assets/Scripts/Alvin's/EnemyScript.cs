@@ -14,7 +14,10 @@ public class EnemyScript : InteractionTrigger
         QTE.SetActive(true);
         ls = FindObjectOfType<LogicScript>();
         beingAttacked = true;
-      // playerMovement.canMove = false;
+        {
+            playerMovement.canMove = false;
+            Debug.Log("Setfalse");
+        }
         StartCoroutine(Attacked());
     }
 

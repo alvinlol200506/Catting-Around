@@ -27,6 +27,7 @@ public class LogicScript : MonoBehaviour
     //public GameObject kucingJahat;
     public EnemyScript enemyScript;
     [SerializeField] private Animator enemyAnimator;
+    public PlayerMovement playerMovement;
 
 
     public TextMeshProUGUI DisplayTime;
@@ -53,6 +54,8 @@ public class LogicScript : MonoBehaviour
             QTE.SetActive(false);
             enemyScript.beingAttacked = false;
             enemyAnimator.SetTrigger("Enemy Dead");
+            playerMovement.canMove = true;
+            
         }
 
         updateEnemyBar();

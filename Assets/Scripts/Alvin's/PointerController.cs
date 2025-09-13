@@ -9,6 +9,7 @@ public class PointerController : MonoBehaviour
     [SerializeField] GameObject QTE;
     LogicScript ls;
     [SerializeField] private Animator animator;
+     [SerializeField] private Animator animatorPlayer;
 
 
     private float direction = 1f; // 1 for moving towards B, -1 for moving towards A
@@ -54,6 +55,7 @@ public class PointerController : MonoBehaviour
             ls.EnemyHealthEdit(-1);
             Debug.Log("Success!");
             animator.SetTrigger("Hit");
+            animatorPlayer.SetTrigger("Attacks");
         }
         else
         {
